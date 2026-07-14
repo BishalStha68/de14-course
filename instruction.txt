@@ -1,0 +1,22 @@
+python -m venv .venv
+py -3.12 -m venv .venv
+. .venv/Scripts/activate
+pip install-tools
+pip-compile requirements.in
+pip install -r requirements.txt
+
+
+extra
+nano ~/.bash_profile
+export PS1="\[\033[33m\]\w\[\033[0m\] $ "
+(This tells Git Bash to only show your current working directory in yellow, followed by a $ symbol).
+
+    Paste it into the terminal (you can usually right-click inside the terminal and select Paste).
+
+Step 3: Save and Exit
+
+    Press Ctrl + O (this writes the file).
+
+    Press Enter to confirm the file name.
+
+    Press Ctrl + X to exit the nano editor.

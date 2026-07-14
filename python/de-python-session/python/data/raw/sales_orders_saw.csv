@@ -1,0 +1,11 @@
+order id , customer name , customer email , order date,product,quantity,unit_price,country
+1001,  Ram Sharma  ,ram.sharma@email.com,2026-04-01,Laptop,1,95000,Nepal
+1002,Sita Gurung,sita.gurung@email.com,2026-04-02,Mouse,2,1200,Nepal
+1003, Hari Bhandari  ,hari.bhandari@email.com,2026-04-04,Keyboard,1,3500,Nepal
+1004,,unknown@email.com,2026-04-05,Monitor,1,24000,Nepal
+1005,Nisha Thapa,nisha.thapa@email.com,invalid-date,USB Cable,3,500,Nepal
+1006,Bikash Rai,bikash.rai@email.com,2026-04-08,Headphones,,4500,Nepal
+1007, Anju Lama ,anju.lama@email.com,2026-04-09,Webcam,1,,Nepal
+1008,Prakash KC,prakash.kc@email.com,2026-04-10,Chair,2,8500,Nepal
+1009,Mina Shrestha,mina.shrestha@email.com,2026-04-11,Desk,1,15000,Nepal
+1010,  Ramesh Adhikari,ramesh.adhikari@email.com,2026-04-12,Laptop Stand,2,2500,Nepal
