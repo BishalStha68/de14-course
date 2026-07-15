@@ -1,0 +1,250 @@
+2026-07-15 09:18:20,126 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:18:20,126 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:18:20,126 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:18:20,126 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:18:20,126 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:18:20,126 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:18:20,130 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:18:20,149 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:18:20,149 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:18:20,149 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:18:20,149 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:18:20,155 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:18:20,155 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:18:20,157 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:18:20,157 - INFO - sales_orders_pipeline - expected date format: %y-%m-%d
+2026-07-15 09:18:20,157 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:18:20,157 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 10
+2026-07-15 09:18:20,157 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:18:20,161 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:18:20,161 - INFO - sales_orders_pipeline - rows after null handling: 0
+2026-07-15 09:18:20,161 - INFO - sales_orders_pipeline - rows removed due to null handling: 10
+2026-07-15 09:18:20,161 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:18:20,162 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:18:20,162 - ERROR - sales_orders_pipeline - Pipeline failed with an error: 'AppConfig' object has no attribute 'processed_data_path'
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 132, in run_pipeline
+    save_cleaned_csv(df, config.processed_data_path, logger)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AppConfig' object has no attribute 'processed_data_path'. Did you mean: 'cleaned_data_path'?
+2026-07-15 09:18:20,163 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:18:20,163 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:18:20,163 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:23:50,021 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:23:50,021 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:23:50,021 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:23:50,021 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:23:50,021 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:23:50,021 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:23:50,024 - INFO - sales_orders_pipeline - expected date format: %y-%m-%d
+2026-07-15 09:23:50,028 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:23:50,028 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 10
+2026-07-15 09:23:50,028 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:23:50,031 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:23:50,031 - INFO - sales_orders_pipeline - rows after null handling: 0
+2026-07-15 09:23:50,031 - INFO - sales_orders_pipeline - rows removed due to null handling: 10
+2026-07-15 09:23:50,031 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:23:50,033 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:23:50,033 - ERROR - sales_orders_pipeline - Pipeline failed with an error: 'AppConfig' object has no attribute 'processed_data_path'
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 132, in run_pipeline
+    save_cleaned_csv(df, config.processed_data_path, logger)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AppConfig' object has no attribute 'processed_data_path'. Did you mean: 'cleaned_data_path'?
+2026-07-15 09:23:50,034 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:23:50,034 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:23:50,034 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:27:45,984 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:27:45,984 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:27:45,984 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:27:45,984 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:27:45,984 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:27:45,984 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:27:45,988 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:27:45,988 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:27:45,989 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:27:45,989 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:27:45,989 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:27:45,989 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:27:45,989 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:27:45,989 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:27:45,993 - INFO - sales_orders_pipeline - expected date format: %y-%m-%d
+2026-07-15 09:27:45,994 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:27:45,995 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 10
+2026-07-15 09:27:45,995 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:27:45,998 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:27:45,998 - INFO - sales_orders_pipeline - rows after null handling: 0
+2026-07-15 09:27:45,999 - INFO - sales_orders_pipeline - rows removed due to null handling: 10
+2026-07-15 09:27:45,999 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:27:46,000 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:27:46,000 - ERROR - sales_orders_pipeline - Pipeline failed with an error: 'AppConfig' object has no attribute 'processed_data_path'
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 132, in run_pipeline
+    save_cleaned_csv(df, config.processed_data_path, logger)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AppConfig' object has no attribute 'processed_data_path'. Did you mean: 'cleaned_data_path'?
+2026-07-15 09:27:46,000 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:27:46,001 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:27:46,001 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:30:30,840 - INFO - sales_orders_pipeline - expected date format: %y-%m-%d
+2026-07-15 09:30:30,850 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:30:30,852 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 10
+2026-07-15 09:30:30,852 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:30:30,853 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:30:30,853 - INFO - sales_orders_pipeline - rows after null handling: 0
+2026-07-15 09:30:30,854 - INFO - sales_orders_pipeline - rows removed due to null handling: 10
+2026-07-15 09:30:30,854 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:30:30,854 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:30:30,854 - INFO - sales_orders_pipeline - starting csv save step
+2026-07-15 09:30:30,854 - INFO - sales_orders_pipeline - saving cleaned data to data/cleaned/sales_orders_cleaned.csv
+2026-07-15 09:30:30,859 - INFO - sales_orders_pipeline - successfully saved cleaned data with 0 rows and 9 columns
+2026-07-15 09:30:30,859 - INFO - sales_orders_pipeline - Pipeline completed successfully.
+2026-07-15 09:30:30,861 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:30:30,861 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:30:30,861 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:32:32,639 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:32:32,639 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:32:32,639 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:32:32,639 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:32:32,639 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:32:32,639 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:32:32,642 - INFO - sales_orders_pipeline - expected date format: %y-%m-%d
+2026-07-15 09:32:32,647 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:32:32,647 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 10
+2026-07-15 09:32:32,647 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:32:32,649 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:32:32,649 - INFO - sales_orders_pipeline - rows after null handling: 0
+2026-07-15 09:32:32,649 - INFO - sales_orders_pipeline - rows removed due to null handling: 10
+2026-07-15 09:32:32,649 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:32:32,649 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:32:32,649 - ERROR - sales_orders_pipeline - Pipeline failed with an error: 'AppConfig' object has no attribute 'processed_data_path'
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 132, in run_pipeline
+    save_cleaned_csv(df, config.processed_data_path, logger)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AppConfig' object has no attribute 'processed_data_path'. Did you mean: 'cleaned_data_path'?
+2026-07-15 09:32:32,651 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:32:32,651 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:32:32,651 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:36:46,921 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:36:46,922 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:36:46,927 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:36:46,927 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:36:46,927 - INFO - sales_orders_pipeline - expected date format: %y-%m-%d
+2026-07-15 09:36:46,929 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:36:46,929 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 10
+2026-07-15 09:36:46,929 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:36:46,931 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:36:46,931 - INFO - sales_orders_pipeline - rows after null handling: 0
+2026-07-15 09:36:46,931 - INFO - sales_orders_pipeline - rows removed due to null handling: 10
+2026-07-15 09:36:46,931 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:36:46,932 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:36:46,932 - ERROR - sales_orders_pipeline - Pipeline failed with an error: 'AppConfig' object has no attribute 'processed_data_path'
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 132, in run_pipeline
+    save_cleaned_csv(df, config.processed_data_path, logger)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AppConfig' object has no attribute 'processed_data_path'. Did you mean: 'cleaned_data_path'?
+2026-07-15 09:36:46,933 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:36:46,933 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:36:46,933 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:52:38,246 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:52:38,246 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:52:38,246 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:52:38,246 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:52:38,246 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:52:38,246 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 09:52:38,249 - INFO - sales_orders_pipeline - expected date format: %Y-%m-%d
+2026-07-15 09:52:38,279 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 09:52:38,279 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 1
+2026-07-15 09:52:38,279 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - rows after null handling: 9
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - rows removed due to null handling: 1
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - starting csv save step
+2026-07-15 09:52:38,280 - INFO - sales_orders_pipeline - saving cleaned data to data/processed/sales_orders_cleaned.csv
+2026-07-15 09:52:38,290 - INFO - sales_orders_pipeline - successfully saved cleaned data with 9 rows and 9 columns
+2026-07-15 09:52:38,290 - INFO - sales_orders_pipeline - Pipeline completed successfully.
+2026-07-15 09:52:38,290 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:52:38,290 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:52:38,290 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 10:10:41,993 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - starrting column name cleaning step
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - original columns: ['order id ', ' customer name ', ' customer email ', ' order date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - cleaned columns: ['order_id', 'customer_name', 'customer_email', 'order_date', 'product', 'quantity', 'unit_price', 'country']
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - starting string column cleaning step
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - cleaned string columns: ['customer_name', 'customer_email', 'order_date', 'product', 'country']
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - starting date parsing step
+2026-07-15 10:10:42,017 - INFO - sales_orders_pipeline - sample order_date values before parsing: ['2026-04-01', '2026-04-02', '2026-04-04', '2026-04-05', 'invalid-date']
+2026-07-15 10:10:42,025 - INFO - sales_orders_pipeline - expected date format: %Y-%m-%d
+2026-07-15 10:10:42,027 - INFO - sales_orders_pipeline - missing dates before parsing: 0
+2026-07-15 10:10:42,028 - INFO - sales_orders_pipeline - invalid or missing dates after parsing: 1
+2026-07-15 10:10:42,028 - INFO - sales_orders_pipeline - starting null handling step
+2026-07-15 10:10:42,031 - INFO - sales_orders_pipeline - rows before null handling: 10
+2026-07-15 10:10:42,031 - INFO - sales_orders_pipeline - rows after null handling: 9
+2026-07-15 10:10:42,031 - INFO - sales_orders_pipeline - rows removed due to null handling: 1
+2026-07-15 10:10:42,031 - INFO - sales_orders_pipeline - starting business column addition step
+2026-07-15 10:10:42,033 - INFO - sales_orders_pipeline - added total_amount column
+2026-07-15 10:10:42,033 - INFO - sales_orders_pipeline - starting csv save step
+2026-07-15 10:10:42,033 - INFO - sales_orders_pipeline - saving cleaned data to data/processed/sales_orders_cleaned.csv
+2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - successfully saved cleaned data with 9 rows and 9 columns
+2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - Pipeline completed successfully.
+2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - ================================================================================

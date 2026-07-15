@@ -1,0 +1,36 @@
+2026-07-15 09:15:15,169 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:15:15,169 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:15:15,169 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:15:15,170 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:15:15,170 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:15:15,170 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:15:15,170 - ERROR - sales_orders_pipeline - file not found: data/raw/sales_orders.csv
+2026-07-15 09:15:15,196 - ERROR - sales_orders_pipeline - Pipeline failed with an error: file not found: data/raw/sales_orders.csv
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 126, in run_pipeline
+    df = read_csv_files(config.raw_data_path, logger)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 13, in read_csv_files
+    raise FileNotFoundError(f"file not found: {file_path}")
+FileNotFoundError: file not found: data/raw/sales_orders.csv
+2026-07-15 09:15:15,196 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:15:15,196 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:15:15,196 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:16:13,278 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:16:13,278 - INFO - sales_orders_pipeline - Starting pipeline: salesOrdersClearingPipeline
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-15 09:16:13,280 - ERROR - sales_orders_pipeline - file not found: data/raw/sales_orders.csv
+2026-07-15 09:16:13,280 - ERROR - sales_orders_pipeline - Pipeline failed with an error: file not found: data/raw/sales_orders.csv
+Traceback (most recent call last):
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 126, in run_pipeline
+    df = read_csv_files(config.raw_data_path, logger)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\de14-course\python\de-python-session\python\src\clean_sales_orders.py", line 13, in read_csv_files
+    raise FileNotFoundError(f"file not found: {file_path}")
+FileNotFoundError: file not found: data/raw/sales_orders.csv
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
+2026-07-15 09:16:13,280 - INFO - sales_orders_pipeline - ================================================================================

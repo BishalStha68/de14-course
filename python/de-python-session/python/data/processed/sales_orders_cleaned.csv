@@ -1,0 +1,10 @@
+order_id,customer_name,customer_email,order_date,product,quantity,unit_price,country,total_amount
+1001,Ram Sharma,ram.sharma@email.com,2026-04-01,Laptop,1.0,95000.0,Nepal,95000.0
+1002,Sita Gurung,sita.gurung@email.com,2026-04-02,Mouse,2.0,1200.0,Nepal,2400.0
+1003,Hari Bhandari,hari.bhandari@email.com,2026-04-04,Keyboard,1.0,3500.0,Nepal,3500.0
+1004,Unknown Customer,unknown@email.com,2026-04-05,Monitor,1.0,24000.0,Nepal,24000.0
+1006,Bikash Rai,bikash.rai@email.com,2026-04-08,Headphones,0.0,4500.0,Nepal,0.0
+1007,Anju Lama,anju.lama@email.com,2026-04-09,Webcam,1.0,0.0,Nepal,0.0
+1008,Prakash KC,prakash.kc@email.com,2026-04-10,Chair,2.0,8500.0,Nepal,17000.0
+1009,Mina Shrestha,mina.shrestha@email.com,2026-04-11,Desk,1.0,15000.0,Nepal,15000.0
+1010,Ramesh Adhikari,ramesh.adhikari@email.com,2026-04-12,Laptop Stand,2.0,2500.0,Nepal,5000.0
