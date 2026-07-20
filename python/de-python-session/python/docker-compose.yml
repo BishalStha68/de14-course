@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: de_python_postgres
+    environment:
+      POSTGRES_USER: de_user
+      POSTGRES_PASSWORD: de_password
+      POSTGRES_DB: de_db
+    ports:
+      - "5432:5432"  
+    volumes:
+      - de_python_postgres_data:/var/lib/postgresql/data  
+
+volumes:
+  de_python_postgres_data:     

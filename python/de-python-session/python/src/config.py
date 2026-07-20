@@ -7,7 +7,7 @@ class AppConfig:
     app_name: str
     environment: str
     raw_data_path: str
-    processed_data_path: str
+    cleaned_data_path: str
     log_file_path: str
     date_format: str
     
@@ -26,7 +26,7 @@ def load_config() -> AppConfig:
         app_name=os.getenv('APP_NAME', 'Sales Orders ETL Pipeline'),
         environment=os.getenv('ENVIRONMENT', 'Development'),
         raw_data_path=os.getenv('RAW_DATA_PATH', 'data/raw/sales_orders_raw.csv'),
-        processed_data_path=os.getenv('PROCESSED_DATA_PATH', 'data/processed/sales_orders_cleaned.csv'),
+        cleaned_data_path=os.getenv('CLEANED_DATA_PATH', 'data/cleaned/sales_orders_cleaned.csv'),
         log_file_path=os.getenv('LOG_FILE_PATH', 'logs/pipeline.log'),
         date_format=os.getenv('DATE_FORMAT', '%Y-%m-%d'),
         db_host=os.getenv('DB_HOST', 'localhost'),
