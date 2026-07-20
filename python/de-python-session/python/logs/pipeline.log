@@ -248,3 +248,85 @@ AttributeError: 'AppConfig' object has no attribute 'processed_data_path'. Did y
 2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - ================================================================================
 2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - Ending pipeline: salesOrdersClearingPipeline
 2026-07-15 10:10:42,046 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:13:50,041 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:13:50,041 - INFO - sales_orders_pipeline - Starting pipeline: Sales Orders ETL Pipeline
+2026-07-20 10:13:50,041 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-20 10:13:50,041 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:13:50,044 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-20 10:13:50,044 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders.csv
+2026-07-20 10:13:50,044 - ERROR - sales_orders_pipeline - file not found: data/raw/sales_orders.csv
+2026-07-20 10:13:50,044 - ERROR - sales_orders_pipeline - an error occurred: file not found: data/raw/sales_orders.csv
+2026-07-20 10:13:50,044 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:13:50,044 - INFO - sales_orders_pipeline - Finished pipeline: Sales Orders ETL Pipeline
+2026-07-20 10:13:50,044 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:20:43,222 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:20:43,222 - INFO - sales_orders_pipeline - Starting pipeline: Sales Orders ETL Pipeline
+2026-07-20 10:20:43,222 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-20 10:20:43,222 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:20:43,222 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-20 10:20:43,222 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders_raw.csv
+2026-07-20 10:20:43,270 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-20 10:20:43,270 - INFO - sales_orders_pipeline - starting data transformation step
+2026-07-20 10:20:43,270 - INFO - sales_orders_pipeline - cleaning column names
+2026-07-20 10:20:43,276 - INFO - sales_orders_pipeline - cleaning string columns
+2026-07-20 10:20:43,280 - INFO - sales_orders_pipeline - parsing order_date column
+2026-07-20 10:20:43,283 - INFO - sales_orders_pipeline - number of invalid order_date entries after parsing: 1
+2026-07-20 10:20:43,283 - INFO - sales_orders_pipeline - handling missing values
+2026-07-20 10:20:43,285 - INFO - sales_orders_pipeline - Removing rows with missing order_date
+2026-07-20 10:20:43,290 - INFO - sales_orders_pipeline - creating total_amount column
+2026-07-20 10:20:43,292 - WARNING - sales_orders_pipeline - found 2 rows with total_amount equal to 0
+2026-07-20 10:20:43,292 - INFO - sales_orders_pipeline - converting order_date to date-only value for database loading
+2026-07-20 10:20:43,293 - INFO - sales_orders_pipeline - transform step completed
+2026-07-20 10:20:43,293 - INFO - sales_orders_pipeline - rows before transformation: 10
+2026-07-20 10:20:43,293 - INFO - sales_orders_pipeline - rows after transformation: 9
+2026-07-20 10:20:43,293 - INFO - sales_orders_pipeline - rows removed: 1
+2026-07-20 10:20:43,294 - INFO - sales_orders_pipeline - starting cleaned csv save step
+2026-07-20 10:20:43,294 - INFO - sales_orders_pipeline - saving cleaned data to data/cleaned/sales_orders_cleaned.csv
+2026-07-20 10:20:43,297 - INFO - sales_orders_pipeline - successfully saved cleaned data to data/cleaned/sales_orders_cleaned.csv
+2026-07-20 10:20:43,297 - INFO - sales_orders_pipeline - establishing database connection
+2026-07-20 10:20:47,437 - ERROR - sales_orders_pipeline - an error occurred: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-07-20 10:20:47,437 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:20:47,437 - INFO - sales_orders_pipeline - Finished pipeline: Sales Orders ETL Pipeline
+2026-07-20 10:20:47,437 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:22:57,368 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:22:57,368 - INFO - sales_orders_pipeline - Starting pipeline: Sales Orders ETL Pipeline
+2026-07-20 10:22:57,368 - INFO - sales_orders_pipeline - Environment: Development
+2026-07-20 10:22:57,368 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:22:57,368 - INFO - sales_orders_pipeline - starting csv read step
+2026-07-20 10:22:57,368 - INFO - sales_orders_pipeline - reading data from data/raw/sales_orders_raw.csv
+2026-07-20 10:22:57,372 - INFO - sales_orders_pipeline - successfully read 10 rows and 8 columns
+2026-07-20 10:22:57,372 - INFO - sales_orders_pipeline - starting data transformation step
+2026-07-20 10:22:57,372 - INFO - sales_orders_pipeline - cleaning column names
+2026-07-20 10:22:57,372 - INFO - sales_orders_pipeline - cleaning string columns
+2026-07-20 10:22:57,372 - INFO - sales_orders_pipeline - parsing order_date column
+2026-07-20 10:22:57,376 - INFO - sales_orders_pipeline - number of invalid order_date entries after parsing: 1
+2026-07-20 10:22:57,376 - INFO - sales_orders_pipeline - handling missing values
+2026-07-20 10:22:57,377 - INFO - sales_orders_pipeline - Removing rows with missing order_date
+2026-07-20 10:22:57,378 - INFO - sales_orders_pipeline - creating total_amount column
+2026-07-20 10:22:57,379 - WARNING - sales_orders_pipeline - found 2 rows with total_amount equal to 0
+2026-07-20 10:22:57,382 - INFO - sales_orders_pipeline - converting order_date to date-only value for database loading
+2026-07-20 10:22:57,384 - INFO - sales_orders_pipeline - transform step completed
+2026-07-20 10:22:57,385 - INFO - sales_orders_pipeline - rows before transformation: 10
+2026-07-20 10:22:57,385 - INFO - sales_orders_pipeline - rows after transformation: 9
+2026-07-20 10:22:57,385 - INFO - sales_orders_pipeline - rows removed: 1
+2026-07-20 10:22:57,385 - INFO - sales_orders_pipeline - starting cleaned csv save step
+2026-07-20 10:22:57,385 - INFO - sales_orders_pipeline - saving cleaned data to data/cleaned/sales_orders_cleaned.csv
+2026-07-20 10:22:57,393 - INFO - sales_orders_pipeline - successfully saved cleaned data to data/cleaned/sales_orders_cleaned.csv
+2026-07-20 10:22:57,393 - INFO - sales_orders_pipeline - establishing database connection
+2026-07-20 10:22:57,457 - INFO - sales_orders_pipeline - database connection established
+2026-07-20 10:22:57,457 - INFO - sales_orders_pipeline - beginning database transaction
+2026-07-20 10:22:57,457 - INFO - sales_orders_pipeline - checking or creating target table in database
+2026-07-20 10:22:57,483 - INFO - sales_orders_pipeline - target table public.sales_orders_cleaned is ready
+2026-07-20 10:22:57,483 - INFO - sales_orders_pipeline - starting data load step
+2026-07-20 10:22:57,483 - INFO - sales_orders_pipeline - load step completed successfully
+2026-07-20 10:22:57,483 - INFO - sales_orders_pipeline - loaded 9 records into database table public.sales_orders_cleaned
+2026-07-20 10:22:57,493 - INFO - sales_orders_pipeline - transaction committed successfully
+2026-07-20 10:22:57,493 - INFO - sales_orders_pipeline - Pipeline completed successfully.
+2026-07-20 10:22:57,493 - INFO - sales_orders_pipeline - database connection closed
+2026-07-20 10:22:57,493 - INFO - sales_orders_pipeline - ================================================================================
+2026-07-20 10:22:57,493 - INFO - sales_orders_pipeline - Finished pipeline: Sales Orders ETL Pipeline
+2026-07-20 10:22:57,493 - INFO - sales_orders_pipeline - ================================================================================
